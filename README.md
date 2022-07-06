@@ -10,4 +10,4 @@
 
 1. Rename new icon to `icon.png`.
 
-2. Drop new icon into main.pyw directory.
+2. Drop new icon into `main.pyw` directory.
