@@ -10,7 +10,8 @@ def clear(icon, item):
 		ctypes.windll.user32.MessageBoxW(0, "Bin has been emptied", "Tray Bin", 0)
 
 def app_exit():
-	icon.stop()
+	if ctypes.windll.user32.MessageBoxW(0, "Do you want to exit TrayBin?", "Tray Bin", 4) == 6:
+		icon.stop()
 
 icon = pystray.Icon("Tray Bin", image, menu=pystray.Menu(pystray.MenuItem("Clear bin", clear), pystray.MenuItem("Exit", app_exit)))
 
